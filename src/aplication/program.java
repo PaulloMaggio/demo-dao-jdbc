@@ -46,6 +46,11 @@ public class Program {
 		sellerDao.deleteById(id);
 		System.out.println("Delete Completed");
 		
+		System.out.println("\n=== TEST 7: seller insert =====");
+		Seller newSeller = new Seller(null, "Mark", "greg@gmail.com", new Date(), 4000.0, department);
+		sellerDao.insert(newSeller);
+		System.out.println("Inserted! New id = " + newSeller.getId());
+		
 		sc.close();
 	}
 }
